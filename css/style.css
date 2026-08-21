@@ -39,14 +39,14 @@ img{height:auto;}
 section{padding:90px 0;position:relative;}
 h1,h2,h3{line-height:1.06;margin:0 0 .5em 0;font-weight:800;letter-spacing:-0.02em;}
 h1{font-size:clamp(2.6rem,6vw,4.6rem);}
-.h1-sub{
+.h1-pre{
   display:block;
-  margin-top:.18em;
-  font-size:clamp(1.25rem,2.4vw,1.7rem);
+  margin-bottom:.1em;
+  font-size:clamp(1.15rem,2.2vw,1.5rem);
   font-weight:700;
   letter-spacing:0;
   line-height:1.2;
-  color:var(--clay-dark);
+  color:var(--ink-soft);
 }
 h2{font-size:clamp(2rem,4vw,3rem);}
 h3{font-size:1.25rem;}
