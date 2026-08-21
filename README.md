@@ -28,7 +28,7 @@ python3 -m http.server 8000
 ## Inhoud aanpassen
 
 - **Teksten en prijzen**: rechtstreeks in `index.html`. De prijstabel voor flexplekken staat onder `<!-- PRIJZEN -->`.
-- **Beschikbaarheid** ("Nu 1 vaste plek vrij"): staat alleen in de stickers, nergens in de lopende tekst. Vier stuks: `<span class="sticker">` in de hero, de twee `price-sticker`s op de prijskaarten en `<span class="cta-sticker">` in het contactblok. Niks vrij? Haal de betreffende spans weg.
+- **Beschikbaarheid** ("Meerdere plekken vrij", "Nu 1 plek vrij"): staat alleen in de stickers, nergens in de lopende tekst. Vier stuks: `<span class="sticker">` in de hero, de twee `price-sticker`s op de prijskaarten en `<span class="cta-sticker">` in het contactblok. Niks vrij? Haal de betreffende spans weg.
 - **Foto's**: vervang de bestanden in `img/` en pas de `alt`-tekst en `width`/`height` in `index.html` aan. Houd ze rond de 1400px breed.
 - **Kleuren**: de `:root`-variabelen bovenin `css/style.css`.
 
