@@ -135,7 +135,7 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 }
 
 /* hero */
-.hero{padding-top:70px;padding-bottom:60px;}
+.hero{padding-top:70px;padding-bottom:60px;overflow-x:clip;}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:52px;align-items:center;}
 @media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;}}
 .hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px;}
