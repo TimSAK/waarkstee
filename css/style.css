@@ -243,7 +243,10 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
   transform:rotate(-8deg);
   top:-18px;
   right:-14px;
+  z-index:3;
+  white-space:nowrap;
 }
+@media(max-width:600px){.sticker{right:6px;top:-16px;font-size:.8rem;}}
 
 /* voorzieningen */
 .alt{background:var(--paper-alt);border-top:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);}
