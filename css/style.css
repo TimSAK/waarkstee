@@ -129,8 +129,8 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 .mobile-menu li:last-child a{border-bottom:none;}
 .mobile-menu .btn{margin-top:12px;justify-content:center;box-shadow:4px 5px 0 var(--ink);}
 
-@media(min-width:760px){
-  .nav-cta{display:inline-flex;padding:12px 22px;font-size:.92rem;box-shadow:4px 5px 0 var(--ink);}
+@media(min-width:860px){
+  .nav-cta{display:inline-flex;padding:12px 22px;font-size:.92rem;box-shadow:4px 5px 0 var(--ink);white-space:nowrap;}
   .nav-links{display:flex;gap:30px;}
   .nav-toggle,.mobile-menu{display:none !important;}
 }
@@ -240,7 +240,7 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 .alt{background:var(--paper-alt);border-top:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);}
 .grid-cards{display:grid;grid-template-columns:repeat(1,1fr);gap:22px;margin-top:48px;}
 @media(min-width:640px){.grid-cards{grid-template-columns:repeat(2,1fr);}}
-@media(min-width:980px){.grid-cards{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:980px){.grid-cards{grid-template-columns:repeat(4,1fr);}}
 .card{
   background:#fff;
   border:2.5px solid var(--ink);
@@ -261,19 +261,9 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
   margin-bottom:18px;
   border:2px solid var(--ink);
 }
-.card:nth-child(3n+2) .icon{background:var(--clay-soft);color:var(--clay-dark);}
-.card:nth-child(3n) .icon{background:#fdeccb;color:#a5721a;}
+.card:nth-child(4n+2) .icon{background:var(--clay-soft);color:var(--clay-dark);}
+.card:nth-child(4n+3) .icon{background:#fdeccb;color:#a5721a;}
 .card h3{margin-bottom:6px;}
-.card-wide{
-  grid-column:1 / -1;
-  display:flex;align-items:center;gap:22px;
-  padding:24px 26px;
-}
-.card-wide .icon{margin-bottom:0;flex:none;}
-.card-wide p{max-width:62ch;}
-.card.card-wide,.card.card-wide:nth-child(odd){transform:rotate(.4deg);}
-.card.card-wide:hover,.card.card-wide:nth-child(odd):hover{transform:rotate(.4deg) translate(-3px,-4px);}
-@media(max-width:480px){.card-wide{flex-direction:column;align-items:flex-start;gap:14px;}}
 .card p{margin:0;font-size:.93rem;}
 
 /* prijzen */
