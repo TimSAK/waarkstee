@@ -1,0 +1,6 @@
+.DS_Store
+.idea/
+Thumbs.db
+
+# Oorspronkelijke single-file versie (alles staat nu in index.html + css/js/img)
+website-nieuweweg16.html

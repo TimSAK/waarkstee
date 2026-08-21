@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina niet gevonden — Waarkstee</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{--ink:#241c15;--ink-soft:#5c5044;--paper:#fbf3e6;--clay:#c9552f;--clay-dark:#a5401f;--clay-soft:#f6ddce;--mustard:#e8a93d;}
+  *{box-sizing:border-box;}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .card{background:#fff;border:2.5px solid var(--ink);border-radius:22px;padding:44px 36px;max-width:520px;width:100%;
+    box-shadow:8px 9px 0 var(--ink);transform:rotate(-1deg);text-align:center;}
+  .mark{display:inline-flex;width:54px;height:54px;border-radius:14px;background:var(--clay);color:#fff5ea;
+    align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;border:2.5px solid var(--ink);transform:rotate(-6deg);margin-bottom:20px;}
+  .code{display:inline-block;background:var(--mustard);border:2.5px solid var(--ink);border-radius:999px;padding:6px 16px;
+    font-weight:800;font-size:.85rem;box-shadow:3px 4px 0 var(--ink);transform:rotate(3deg);margin-bottom:18px;}
+  h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.06;margin:0 0 .5em;font-weight:800;letter-spacing:-0.02em;}
+  p{color:var(--ink-soft);margin:0 0 1.4em;}
+  .btn{display:inline-flex;padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;
+    background:var(--clay);color:#fff5ea;box-shadow:5px 6px 0 var(--ink);border:2.5px solid transparent;transition:transform .18s ease,background .18s ease;}
+  .btn:hover{background:var(--clay-dark);transform:translate(-2px,-3px) rotate(-1deg);}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark" aria-hidden="true">Ws</div>
+    <div><span class="code">404</span></div>
+    <h1>Dizze stee is der nait</h1>
+    <p>Deze pagina bestaat niet (meer). Maar de werkplekken aan de Nieuweweg 16 wel.</p>
+    <a class="btn home" href="/">Terug naar Waarkstee</a>
+  </div>
+  <script>
+    // Op een GitHub Pages project-site (gebruiker.github.io/repo/) is de homepage niet "/" maar "/repo/".
+    if (location.hostname.endsWith('github.io')) {
+      var seg = location.pathname.split('/')[1];
+      if (seg) document.querySelector('a.home').href = '/' + seg + '/';
+    }
+  </script>
+</body>
+</html>
