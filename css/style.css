@@ -282,6 +282,16 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 }
 .price-card.featured p, .price-card.featured .price-note{color:rgba(255,245,234,.85);}
 .price-card.featured h3{color:#fff5ea;}
+.price-card.featured .btn-primary{
+  margin-top:auto;
+  align-self:stretch;justify-content:center;
+  background:var(--mustard);color:var(--ink);
+  border-color:var(--ink);
+  box-shadow:6px 7px 0 var(--ink);
+  font-size:1.08rem;padding:18px 30px;
+}
+.price-card.featured .btn-primary:hover{background:#f0b657;box-shadow:8px 9px 0 var(--ink);}
+.price-card.featured .btn-primary:focus-visible{outline-color:#fff5ea;}
 .price-tag{display:flex;align-items:baseline;gap:6px;margin:12px 0 8px 0;}
 .price-tag .amount{font-size:2.8rem;font-weight:800;letter-spacing:-0.02em;}
 .price-tag .period{font-size:.98rem;opacity:.8;}
