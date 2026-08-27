@@ -484,15 +484,17 @@
           </div>
         </div>
         <div class="map-frame" data-map-src="https://www.google.com/maps?q=Nieuweweg+16,+Groningen&output=embed">
-          <div class="map-placeholder">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2.2"/></svg>
-            <strong>Nieuweweg 16, 9711 TD Groningen</strong>
-            <span>Vijf minuten lopen van de Grote Markt.</span>
-            <div class="map-actions">
-              <button type="button" class="btn btn-primary map-load">Kaart laden</button>
-              <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Nieuweweg+16,+Groningen" target="_blank" rel="noopener">Route in Google Maps</a>
-            </div>
+          <picture>
+            <source type="image/webp" srcset="img/kaart-nieuweweg16.webp">
+            <img class="map-static" src="img/kaart-nieuweweg16.jpg" width="1000" height="750" loading="lazy"
+                 alt="Kaart van het centrum van Groningen met een markering op Nieuweweg 16, tussen de Grote Markt en het Damsterdiep.">
+          </picture>
+          <div class="map-overlay">
+            <button type="button" class="btn btn-primary map-load">Interactieve kaart laden</button>
+            <a class="map-route" href="https://www.google.com/maps/dir/?api=1&amp;destination=Nieuweweg+16,+Groningen" target="_blank" rel="noopener">Route plannen</a>
           </div>
+          <small class="map-credit">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-bijdragers</small>
+        </div>
         </div>
       </div>
     </div>
