@@ -118,7 +118,8 @@ header{
   border-bottom:2.5px solid var(--ink);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;max-width:var(--maxw);margin:0 auto;}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--ink);}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--ink);}
+.brand-icon{flex:none;width:56px;height:56px;}
 .wordmark{position:relative;display:inline-block;line-height:1;padding-top:1.5em;}
 .wordmark .awning{position:absolute;top:0;left:-10%;width:120%;max-width:none;height:auto;display:block;}
 .brand-word{font-weight:800;font-size:1.3rem;letter-spacing:-0.02em;}
