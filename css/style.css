@@ -232,13 +232,11 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 .sfeer-row{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start;justify-content:center;}
 .sfeer-row .sfeer-photo{flex:1 1 280px;max-width:360px;height:340px;}
 .sfeer-row .sfeer-photo img{width:100%;height:100%;object-fit:cover;}
-.sfeer-row .sfeer-photo:nth-child(2){transform:rotate(1.2deg);margin-top:48px;}
-.sfeer-row .sfeer-photo:nth-child(3){transform:rotate(-.8deg);margin-top:22px;}
+.sfeer-row .sfeer-photo:nth-child(2){transform:rotate(1.2deg);}
+.sfeer-row .sfeer-photo:nth-child(3){transform:rotate(-.8deg);}
 @media(max-width:640px){
   .sfeer-row{gap:22px;}
   .sfeer-row .sfeer-photo{flex:1 1 100%;max-width:none;height:300px;}
-  .sfeer-row .sfeer-photo:nth-child(2),
-  .sfeer-row .sfeer-photo:nth-child(3){margin-top:0;}
 }
 .sfeer-caption{
   position:absolute;left:14px;bottom:14px;margin:0;
