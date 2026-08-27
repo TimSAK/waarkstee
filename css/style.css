@@ -309,7 +309,7 @@ figure.sfeer-photo{position:relative;padding:0;}
 
 /* prijzen */
 .price-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:48px;}
-@media(min-width:860px){.price-grid{grid-template-columns:.85fr 1.15fr;}}
+@media(min-width:860px){.price-grid{grid-template-columns:1fr 1fr;}}
 .price-card{
   background:#fff;border:2.5px solid var(--ink);border-radius:var(--radius);
   padding:34px;display:flex;flex-direction:column;
