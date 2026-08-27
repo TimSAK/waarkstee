@@ -248,7 +248,7 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
   white-space:nowrap;
 }
 .sfeer-caption-alt{transform:rotate(1.5deg);background:var(--mustard);}
-figure.sfeer-photo{position:relative;padding:0;}
+figure.sfeer-photo{position:relative;padding:0;margin-left:0;margin-right:0;margin-bottom:0;}
 .sfeer-photo{
   margin-top:48px;
   border-radius:var(--radius);
