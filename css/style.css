@@ -236,8 +236,8 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 .hero-dots button[aria-current="true"]{background:var(--clay);}
 .hero-dots button:focus-visible{outline-offset:2px;}
 .sfeer-row{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start;}
-.sfeer-row .sfeer-photo{flex:1 1 320px;max-width:440px;}
-.sfeer-row .sfeer-photo:nth-child(2){transform:rotate(1.2deg);margin-top:64px;}
+.sfeer-row .sfeer-photo{flex:1 1 280px;max-width:360px;}
+.sfeer-row .sfeer-photo:nth-child(2){transform:rotate(1.2deg);margin-top:84px;}
 .sfeer-caption{
   position:absolute;left:14px;bottom:14px;margin:0;
   background:var(--paper);color:var(--ink);
@@ -337,7 +337,7 @@ figure.sfeer-photo{position:relative;padding:0;}
 .price-card.featured .price-sticker{transform:rotate(-5deg);}
 .price-photo{
   margin:-34px -34px 26px -34px;
-  height:250px;
+  height:300px;
   overflow:hidden;
   border-radius:19px 19px 0 0;
   border-bottom:2.5px solid var(--ink);
