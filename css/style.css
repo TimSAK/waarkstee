@@ -43,34 +43,44 @@ picture{display:block;}
 section{padding:90px 0;position:relative;overflow-x:clip;isolation:isolate;scroll-margin-top:80px;}
 h1,h2,h3{line-height:1.06;margin:0 0 .5em 0;font-weight:800;letter-spacing:-0.02em;}
 h1{font-size:clamp(2.6rem,6vw,4.6rem);}
-.h1-pre{display:block;margin:0 0 .32em .1em;line-height:1;}
+.h1-pre{position:relative;display:block;height:4rem;margin:0 0 .12em .12em;line-height:1;letter-spacing:0;}
+.h1-pre .moi{position:absolute;left:0;bottom:.55rem;white-space:nowrap;}
+.h1-rotate{opacity:1;transition:opacity .6s ease;}
+.h1-rotate.is-in{opacity:0;}
+.h1-rotate.is-out{opacity:0;}
 .h1-stee{color:var(--clay);}
 .h1-sub{display:block;margin-top:.35em;font-size:clamp(1.05rem,1.8vw,1.35rem);font-weight:700;letter-spacing:0;line-height:1.3;color:var(--ink-soft);}
 .moi{
   position:relative;
   display:inline-block;
-  background:var(--mustard);color:var(--ink);
+  --bubble:var(--moss-soft);
+  isolation:isolate;
+  background:var(--bubble);color:var(--ink);
   border:2.5px solid var(--ink);border-radius:999px;
   padding:.22em .75em .26em .75em;
   font-size:clamp(1.3rem,2.6vw,1.9rem);
   font-weight:800;letter-spacing:-0.01em;
-  transform:rotate(-6deg);
+  --tilt:-6deg;
+  transform:rotate(var(--tilt));
   transform-origin:20% 100%;
   animation:moi-wiggle 7s ease-in-out 1.5s infinite;
 }
-.moi::after{
-  content:"";position:absolute;
-  left:22px;bottom:-9px;
-  width:14px;height:14px;
-  background:var(--mustard);
-  border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);
-  transform:rotate(45deg);
+.moi::before,.moi::after{content:"";position:absolute;z-index:-1;}
+.moi::before{ /* donkere driehoek = de lijn van de staart */
+  left:18px;bottom:-12px;width:25px;height:12px;
+  background:var(--ink);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+}
+.moi::after{ /* vulling, overbrugt ook de rand van de ballon */
+  left:22px;bottom:-8.5px;width:17px;height:11px;
+  background:var(--bubble);
+  clip-path:polygon(0 0,100% 0,100% 2.5px,50% 100%,0 2.5px);
 }
 @keyframes moi-wiggle{
-  0%,88%,100%{transform:rotate(-6deg);}
-  91%{transform:rotate(-1deg);}
-  94%{transform:rotate(-9deg);}
-  97%{transform:rotate(-4deg);}
+  0%,88%,100%{transform:rotate(var(--tilt));}
+  91%{transform:rotate(calc(var(--tilt) + 5deg));}
+  94%{transform:rotate(calc(var(--tilt) - 3deg));}
+  97%{transform:rotate(calc(var(--tilt) + 2deg));}
 }
 h2{font-size:clamp(2rem,4vw,3rem);}
 h3{font-size:1.25rem;}
@@ -119,11 +129,10 @@ header{
 }
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;max-width:var(--maxw);margin:0 auto;}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--ink);}
-.brand-icon{flex:none;width:56px;height:56px;}
-.wordmark{position:relative;display:inline-block;line-height:1;padding-top:1.5em;}
-.wordmark .awning{position:absolute;top:0;left:-10%;width:120%;max-width:none;height:auto;display:block;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.brand-logo{width:auto;height:56px;}
 .brand-word{font-weight:800;font-size:1.3rem;letter-spacing:-0.02em;}
-.brand-word span{color:var(--clay);}
+.brand-word > span:last-child{color:var(--clay);}
 nav ul{list-style:none;margin:0;padding:0;}
 nav ul a{text-decoration:none;font-size:.98rem;font-weight:700;color:var(--ink);position:relative;}
 nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:var(--clay);transform:scaleX(0);transition:transform .15s ease;border-radius:3px;}
@@ -167,7 +176,7 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 }
 
 /* hero */
-.hero{padding-top:56px;padding-bottom:60px;overflow-x:clip;}
+.hero{padding-top:70px;padding-bottom:60px;overflow-x:clip;}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:52px;align-items:center;}
 @media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;}}
 .hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px;}
@@ -190,52 +199,19 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 @media(max-width:600px){section:not(.hero) .blob-bg{display:none;}}
 
 .hero-art{position:relative;}
+.hero-stack{display:flex;flex-direction:column;gap:34px;}
 .hero-photo{
-  position:relative;
+  position:relative;margin:0;
   border-radius:var(--radius);
   overflow:hidden;
-  aspect-ratio:4/3;
+  aspect-ratio:16/10;
   border:2.5px solid var(--ink);
   transform:rotate(2deg);
   box-shadow:10px 12px 0 var(--clay-soft);
 }
+.hero-photo--tafel{transform:rotate(-1.5deg);box-shadow:-10px 12px 0 var(--moss-soft);}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 
-/* hero diavoorstelling */
-.hero-slides img{
-  position:absolute;inset:0;
-  opacity:0;
-  transition:opacity .9s ease;
-}
-.hero-slides img.is-active{opacity:1;z-index:2;}
-.hero-slides img.is-prev{opacity:1;z-index:1;}
-.hero-dots{
-  position:absolute;z-index:3;
-  right:14px;bottom:14px;
-  display:flex;gap:2px;
-  padding:4px 8px;
-  background:rgba(251,243,230,.92);
-  border:2px solid var(--ink);
-  border-radius:999px;
-  box-shadow:3px 4px 0 var(--ink);
-}
-.hero-dots button{
-  width:24px;height:24px;padding:0;
-  border:none;background:transparent;
-  border-radius:50%;
-  cursor:pointer;
-  position:relative;
-}
-.hero-dots button::after{
-  content:"";position:absolute;inset:6px;
-  border-radius:50%;
-  border:2px solid var(--ink);
-  background:var(--paper);
-  transition:background .2s ease, transform .2s ease;
-}
-.hero-dots button:hover::after{transform:scale(1.2);}
-.hero-dots button[aria-current="true"]::after{background:var(--clay);}
-.hero-dots button:focus-visible{outline-offset:0;}
 .sfeer-row{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start;justify-content:center;}
 .sfeer-row .sfeer-photo{flex:1 1 280px;max-width:360px;height:340px;}
 .sfeer-row .sfeer-photo img{width:100%;height:100%;object-fit:cover;}
@@ -452,7 +428,8 @@ table.flex-table tr:last-child td{border-bottom:none;}
 .cta-sticker{
   position:absolute;z-index:2;
   top:-18px;right:28px;
-  background:var(--mustard);color:var(--ink);
+  --bubble:var(--moss-soft);
+  background:var(--bubble);color:var(--ink);
   border:2.5px solid var(--ink);border-radius:999px;
   padding:10px 18px;font-weight:800;font-size:.9rem;
   box-shadow:4px 5px 0 #fff5ea;

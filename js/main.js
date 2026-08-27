@@ -32,67 +32,7 @@
   });
 })();
 
-// Hero-diavoorstelling: wisselt elke 5 s tussen de foto's
-(function () {
-  'use strict';
 
-  var root = document.querySelector('.hero-slides');
-  if (!root) return;
-
-  var slides = Array.prototype.slice.call(root.querySelectorAll('img'));
-  var dots = Array.prototype.slice.call(root.querySelectorAll('.hero-dots button'));
-  if (slides.length < 2) return;
-
-  var INTERVAL = 5000;
-  var FADE = 900; // moet overeenkomen met de transition in de CSS
-  var current = 0;
-  var timer = null;
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-  function show(index) {
-    index = (index + slides.length) % slides.length;
-    if (index === current) return;
-
-    var prev = slides[current];
-    var next = slides[index];
-
-    prev.classList.remove('is-active');
-    prev.classList.add('is-prev');
-    prev.setAttribute('aria-hidden', 'true');
-    next.classList.add('is-active');
-    next.removeAttribute('aria-hidden');
-    window.setTimeout(function () { prev.classList.remove('is-prev'); }, FADE);
-
-    dots.forEach(function (dot, i) {
-      if (i === index) dot.setAttribute('aria-current', 'true');
-      else dot.removeAttribute('aria-current');
-    });
-    current = index;
-  }
-
-  function start() {
-    stop();
-    if (reduceMotion.matches || document.hidden) return;
-    timer = window.setInterval(function () { show(current + 1); }, INTERVAL);
-  }
-  function stop() {
-    if (timer) { window.clearInterval(timer); timer = null; }
-  }
-
-  dots.forEach(function (dot, i) {
-    dot.addEventListener('click', function () { show(i); start(); });
-  });
-
-  // Pauzeer bij hover/focus en als het tabblad niet zichtbaar is
-  root.addEventListener('mouseenter', stop);
-  root.addEventListener('mouseleave', start);
-  root.addEventListener('focusin', stop);
-  root.addEventListener('focusout', start);
-  document.addEventListener('visibilitychange', start);
-  if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', start);
-
-  start();
-})();
 
 // Kaart pas laden na klik (geen Google-requests bij paginalading)
 (function () {
@@ -108,4 +48,45 @@
     frame.innerHTML = '';
     frame.appendChild(iframe);
   });
+})();
+
+// Wisselende aanloopzin boven de titel (tekstballon)
+(function () {
+  var pre = document.querySelector('.h1-pre');
+  var el = pre && pre.querySelector('.h1-rotate');
+  if (!el) return;
+  var texts;
+  try { texts = JSON.parse(el.getAttribute('data-rotate')); } catch (e) { return; }
+  if (!texts || texts.length < 2) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // per ballon een iets andere plek en helling
+  var spots = [
+    { x: 0,    r: -6 },
+    { x: 1.6,  r: -3 },
+    { x: 0.6,  r: -8 },
+    { x: 2.4,  r: -5 },
+    { x: 0.2,  r: -2 },
+    { x: 1.2,  r: -7 }
+  ];
+  var i = 0, cur = el;
+  setInterval(function () {
+    i = (i + 1) % texts.length;
+    var s = spots[i % spots.length];
+    var next = document.createElement('span');
+    next.className = 'h1-rotate moi is-in';
+    next.setAttribute('aria-hidden', 'true');
+    next.textContent = texts[i];
+    next.style.left = s.x + 'em';
+    next.style.setProperty('--tilt', s.r + 'deg');
+    pre.appendChild(next);
+    var prev = cur; cur = next;
+    void next.offsetWidth;                     // reflow, zodat de fade-in echt animeert
+    setTimeout(function () {
+      next.classList.remove('is-in');          // nieuwe ballon verschijnt
+      setTimeout(function () {                 // daarna pas de oude laten vervagen
+        prev.classList.add('is-out');
+        setTimeout(function () { if (prev.parentNode) prev.parentNode.removeChild(prev); }, 700);
+      }, 450);
+    }, 30);
+  }, 10000);
 })();
