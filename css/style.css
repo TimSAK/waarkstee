@@ -325,11 +325,10 @@ figure.sfeer-photo{position:relative;padding:0;margin-left:0;margin-right:0;marg
 .price-card{
   background:#fff;border:2.5px solid var(--ink);border-radius:var(--radius);
   padding:34px;display:flex;flex-direction:column;
-  box-shadow:8px 9px 0 var(--moss-soft);
+  box-shadow:8px 9px 0 var(--ink);
   position:relative;
 }
 .price-card.featured{
-  box-shadow:8px 9px 0 var(--mustard-soft);
   background:var(--clay-dark);
   color:#fff5ea;border-color:var(--ink);
   transform:rotate(-1deg);
@@ -376,7 +375,7 @@ table.flex-table tr:last-child td{border-bottom:none;}
   margin-top:40px;
   background:var(--moss-soft);
   border:3px solid var(--moss);
-  box-shadow:8px 9px 0 var(--moss-soft);
+  box-shadow:8px 9px 0 var(--moss);
   border-radius:22px;
   padding:32px 36px;
   display:flex;
