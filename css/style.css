@@ -337,7 +337,7 @@ figure.sfeer-photo{position:relative;padding:0;}
 .price-card.featured .price-sticker{transform:rotate(-5deg);}
 .price-photo{
   margin:-34px -34px 26px -34px;
-  height:190px;
+  height:250px;
   overflow:hidden;
   border-radius:19px 19px 0 0;
   border-bottom:2.5px solid var(--ink);
