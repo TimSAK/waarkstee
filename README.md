@@ -1,6 +1,6 @@
 # Waarkstee website
 
-Website van [Waarkstee](https://timsak.github.io/waarkstee/), een kleine coworking space aan de Nieuweweg 16 in Groningen.
+Website van [Waarkstee](https://waarkstee.nl/), een kleine coworking space aan de Nieuweweg 16 in Groningen.
 
 Statische site zonder build-stap: plain HTML, CSS en een beetje JavaScript. GitHub Pages serveert de `main`-branch rechtstreeks; elke push naar `main` staat binnen een minuut live.
 
