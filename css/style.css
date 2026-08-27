@@ -40,6 +40,7 @@ section{padding:90px 0;position:relative;}
 h1,h2,h3{line-height:1.06;margin:0 0 .5em 0;font-weight:800;letter-spacing:-0.02em;}
 h1{font-size:clamp(2.6rem,6vw,4.6rem);}
 .h1-pre{display:block;margin:0 0 .32em .1em;line-height:1;}
+.h1-stee{color:var(--clay);}
 .moi{
   position:relative;
   display:inline-block;
@@ -113,13 +114,9 @@ header{
 }
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;max-width:var(--maxw);margin:0 auto;}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--ink);}
-.brand-mark{
-  width:38px;height:38px;border-radius:11px;
-  background:var(--clay);
-  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1rem;
-  transform:rotate(-6deg);
-  border:2.5px solid var(--ink);
-}
+.brand-logo{flex:none;}
+.brand-word{font-weight:800;font-size:1.3rem;letter-spacing:-0.02em;}
+.brand-word span{color:var(--clay);}
 nav ul{list-style:none;margin:0;padding:0;}
 nav ul a{text-decoration:none;font-size:.98rem;font-weight:700;color:var(--ink);position:relative;}
 nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:var(--clay);transform:scaleX(0);transition:transform .15s ease;border-radius:3px;}
