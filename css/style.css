@@ -510,9 +510,6 @@ footer{border-top:2.5px solid var(--ink);padding:32px 0;}
 .faq-item summary:focus-visible{outline:3px solid var(--clay);outline-offset:-3px;}
 
 /* schaduw-variatie: grote vlakken gekleurd, knoppen en stickers blijven inkt */
-.sfeer-row .sfeer-photo:nth-child(1){box-shadow:8px 9px 0 var(--clay-soft);}
-.sfeer-row .sfeer-photo:nth-child(2){box-shadow:8px 9px 0 var(--mustard-soft);}
-.sfeer-row .sfeer-photo:nth-child(3){box-shadow:8px 9px 0 var(--moss-soft);}
 .loc-grid .sfeer-photo{box-shadow:8px 9px 0 var(--clay-soft);}
 .faq-item:nth-child(3n+2){box-shadow:6px 7px 0 var(--moss-soft);}
 .faq-item:nth-child(3n){box-shadow:6px 7px 0 var(--mustard-soft);}
