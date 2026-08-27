@@ -10,6 +10,7 @@
   --moss:#5c7a52;
   --moss-soft:#e2ead9;
   --mustard:#e8a93d;
+  --mustard-soft:#fdeccb;
   --ink-card:#2b2118;
   --radius:22px;
   --maxw:1120px;
@@ -320,7 +321,7 @@ figure.sfeer-photo{position:relative;padding:0;margin-left:0;margin-right:0;marg
   position:relative;
 }
 .price-card.featured{
-  box-shadow:8px 9px 0 var(--mustard);
+  box-shadow:8px 9px 0 var(--mustard-soft);
   background:var(--clay-dark);
   color:#fff5ea;border-color:var(--ink);
   transform:rotate(-1deg);
@@ -367,7 +368,7 @@ table.flex-table tr:last-child td{border-bottom:none;}
   margin-top:40px;
   background:var(--moss-soft);
   border:3px solid var(--moss);
-  box-shadow:8px 9px 0 var(--moss);
+  box-shadow:8px 9px 0 var(--moss-soft);
   border-radius:22px;
   padding:32px 36px;
   display:flex;
@@ -424,7 +425,7 @@ table.flex-table tr:last-child td{border-bottom:none;}
   background:var(--ink-card);
   color:#fff5ea;border-radius:28px;padding:72px 40px 56px 40px;text-align:center;
   border:2.5px solid var(--ink);
-  box-shadow:12px 14px 0 var(--clay);
+  box-shadow:12px 14px 0 var(--clay-soft);
   transform:rotate(-.6deg);
 }
 .cta-bg{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none;}
@@ -503,8 +504,8 @@ footer{border-top:2.5px solid var(--ink);padding:32px 0;}
 
 /* schaduw-variatie: grote vlakken gekleurd, knoppen en stickers blijven inkt */
 .sfeer-row .sfeer-photo:nth-child(1){box-shadow:8px 9px 0 var(--clay-soft);}
-.sfeer-row .sfeer-photo:nth-child(2){box-shadow:8px 9px 0 var(--mustard);}
+.sfeer-row .sfeer-photo:nth-child(2){box-shadow:8px 9px 0 var(--mustard-soft);}
 .sfeer-row .sfeer-photo:nth-child(3){box-shadow:8px 9px 0 var(--moss-soft);}
 .loc-grid .sfeer-photo{box-shadow:8px 9px 0 var(--clay-soft);}
 .faq-item:nth-child(3n+2){box-shadow:6px 7px 0 var(--moss-soft);}
-.faq-item:nth-child(3n){box-shadow:6px 7px 0 var(--mustard);}
+.faq-item:nth-child(3n){box-shadow:6px 7px 0 var(--mustard-soft);}
