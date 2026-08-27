@@ -179,6 +179,12 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 .hero{padding-top:70px;padding-bottom:60px;overflow-x:clip;}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:52px;align-items:center;}
 @media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;}}
+/* mobiel: gevelfoto boven de tekst, tafelfoto eronder */
+@media(max-width:899px){
+  .hero-grid .hero-art,.hero-grid .hero-stack{display:contents;}
+  .hero-photo--gevel{order:-1;}
+  .hero-photo--tafel{order:1;}
+}
 .hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px;}
 .hero-meta{display:flex;gap:16px;margin-top:44px;flex-wrap:wrap;}
 .hero-meta div{
