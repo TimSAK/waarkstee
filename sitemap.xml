@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://waarkstee.nl/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://waarkstee.nl/img/eettafel.jpg</image:loc><image:title>De voorruimte van Waarkstee</image:title></image:image>
+    <image:image><image:loc>https://waarkstee.nl/img/werkplekken.jpg</image:loc><image:title>Vaste werkplekken met zit-sta bureaus</image:title></image:image>
+    <image:image><image:loc>https://waarkstee.nl/img/flexplekken.jpg</image:loc><image:title>Flexplekken</image:title></image:image>
+    <image:image><image:loc>https://waarkstee.nl/img/vergaderruimte.jpg</image:loc><image:title>Vergaderruimte</image:title></image:image>
+    <image:image><image:loc>https://waarkstee.nl/img/gevel-zonnescherm.jpg</image:loc><image:title>Gevel Nieuweweg 16, Groningen</image:title></image:image>
+  </url>
+</urlset>

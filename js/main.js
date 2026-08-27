@@ -93,3 +93,19 @@
 
   start();
 })();
+
+// Kaart pas laden na klik (geen Google-requests bij paginalading)
+(function () {
+  var frame = document.querySelector('.map-frame[data-map-src]');
+  if (!frame) return;
+  var btn = frame.querySelector('.map-load');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var iframe = document.createElement('iframe');
+    iframe.src = frame.getAttribute('data-map-src');
+    iframe.title = 'Kaart Nieuweweg 16, Groningen';
+    iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    frame.innerHTML = '';
+    frame.appendChild(iframe);
+  });
+})();
