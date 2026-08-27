@@ -486,7 +486,7 @@ footer{border-top:2.5px solid var(--ink);padding:32px 0;}
 .faq-list{display:grid;gap:14px;max-width:760px;margin-top:34px;}
 .faq-item{
   background:#fff;border:2.5px solid var(--ink);border-radius:18px;
-  box-shadow:6px 7px 0 var(--clay-soft);overflow:hidden;
+  box-shadow:6px 7px 0 var(--clay-dark);overflow:hidden;
 }
 .faq-item summary{
   display:flex;align-items:center;justify-content:space-between;gap:16px;
@@ -511,5 +511,5 @@ footer{border-top:2.5px solid var(--ink);padding:32px 0;}
 
 /* schaduw-variatie: grote vlakken gekleurd, knoppen en stickers blijven inkt */
 .loc-grid .sfeer-photo{box-shadow:8px 9px 0 var(--clay-soft);}
-.faq-item:nth-child(3n+2){box-shadow:6px 7px 0 var(--moss-soft);}
-.faq-item:nth-child(3n){box-shadow:6px 7px 0 var(--mustard-soft);}
+.faq-item:nth-child(3n+2){box-shadow:6px 7px 0 var(--moss);}
+.faq-item:nth-child(3n){box-shadow:6px 7px 0 var(--mustard-dark);}
