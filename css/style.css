@@ -238,6 +238,17 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 .sfeer-row{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start;}
 .sfeer-row .sfeer-photo{flex:1 1 320px;max-width:440px;}
 .sfeer-row .sfeer-photo:nth-child(2){transform:rotate(1.2deg);margin-top:64px;}
+.sfeer-caption{
+  position:absolute;left:14px;bottom:14px;margin:0;
+  background:var(--paper);color:var(--ink);
+  border:2px solid var(--ink);border-radius:999px;
+  padding:7px 16px;font-weight:800;font-size:.88rem;
+  box-shadow:3px 4px 0 var(--ink);
+  transform:rotate(-2deg);
+  white-space:nowrap;
+}
+.sfeer-caption-alt{transform:rotate(1.5deg);background:var(--mustard);}
+figure.sfeer-photo{position:relative;padding:0;}
 .sfeer-photo{
   margin-top:48px;
   border-radius:var(--radius);
