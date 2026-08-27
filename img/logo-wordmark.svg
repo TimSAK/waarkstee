@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420">
+  <defs><clipPath id="awn"><path d="M150 120 H750 L795 175 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 Z"/></clipPath></defs>
+  <rect width="900" height="420" fill="#FBF3E6"/>
+  <rect x="150" y="80" width="600" height="40" rx="14" fill="#E8A93D" stroke="#241C15" stroke-width="14" stroke-linejoin="round"/>
+  <g clip-path="url(#awn)">
+    <rect x="90" y="115" width="720" height="125" fill="#FBF3E6"/>
+    <polygon points="154.1,115 238.6,115 165.6,240 51.8,240" fill="#C9552F"/>
+    <polygon points="323.2,115 407.7,115 393.1,240 279.4,240" fill="#C9552F"/>
+    <polygon points="492.3,115 576.8,115 620.6,240 506.9,240" fill="#C9552F"/>
+    <polygon points="661.4,115 745.9,115 848.2,240 734.4,240" fill="#C9552F"/>
+  </g>
+  <path d="M150 120 H750 L795 175 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 a49.29 49.29 0 0 1 -98.57 0 Z" fill="none" stroke="#241C15" stroke-width="14" stroke-linejoin="round"/>
+  <text x="450" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="800" font-size="130" letter-spacing="-2.5" fill="#241C15">waark<tspan fill="#C9552F">stee</tspan></text>
+</svg>
