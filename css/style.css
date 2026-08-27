@@ -235,6 +235,9 @@ nav ul a:hover::after,nav ul a:focus-visible::after{transform:scaleX(1);}
 .hero-dots button:hover{transform:scale(1.2);}
 .hero-dots button[aria-current="true"]{background:var(--clay);}
 .hero-dots button:focus-visible{outline-offset:2px;}
+.sfeer-row{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start;}
+.sfeer-row .sfeer-photo{flex:1 1 320px;max-width:440px;}
+.sfeer-row .sfeer-photo:nth-child(2){transform:rotate(1.2deg);margin-top:64px;}
 .sfeer-photo{
   margin-top:48px;
   border-radius:var(--radius);
