@@ -58,7 +58,9 @@
 
     prev.classList.remove('is-active');
     prev.classList.add('is-prev');
+    prev.setAttribute('aria-hidden', 'true');
     next.classList.add('is-active');
+    next.removeAttribute('aria-hidden');
     window.setTimeout(function () { prev.classList.remove('is-prev'); }, FADE);
 
     dots.forEach(function (dot, i) {

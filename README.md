@@ -1,4 +1,4 @@
-# Waarkstee — website
+# Waarkstee website
 
 Website van [Waarkstee](https://timsak.github.io/waarkstee/), een kleine coworking space aan de Nieuweweg 16 in Groningen.
 
