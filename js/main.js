@@ -90,3 +90,52 @@
     }, 30);
   }, 10000);
 })();
+
+// Contactformulier: versturen zonder paginawissel (Web3Forms) + keuze vooraf invullen
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = form.querySelector('.cf-status');
+  var button = form.querySelector('button[type="submit"]');
+
+  function count(path) {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: path, title: path, event: true });
+    }
+  }
+
+  // "Vaste plek aanvragen", "Flexplek aanvragen" enz. zetten de juiste keuze aan
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('[data-interesse]');
+    if (!link) return;
+    var radio = form.querySelector('input[name="interesse"][value="' + link.getAttribute('data-interesse') + '"]');
+    if (radio) radio.checked = true;
+  });
+
+  // Klikken op een mailadres ook tellen, zodat we zien of mensen contact zoeken
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('a[href^="mailto:"]')) count('klik-mail');
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    button.disabled = true;
+    status.textContent = 'Bezig met versturen…';
+    fetch(form.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (res) { return res.json().then(function (data) { return res.ok && data.success; }); })
+      .then(function (ok) {
+        if (!ok) throw new Error('niet verstuurd');
+        form.classList.add('is-sent');
+        status.textContent = 'Dank je! We hebben je bericht ontvangen en mailen je zo snel mogelijk terug.';
+        count('aanvraag-verstuurd');
+      })
+      .catch(function () {
+        status.innerHTML = 'Dat ging helaas mis. Mail ons direct op <a href="mailto:info@waarkstee.nl">info@waarkstee.nl</a>.';
+        button.disabled = false;
+      });
+  });
+})();
