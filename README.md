@@ -37,3 +37,7 @@ python3 -m http.server 8000
 1. Zet in GitHub bij *Settings → Pages → Custom domain* het domein (bijv. `waarkstee.nl`) en zet *Enforce HTTPS* aan.
 2. Bij je DNS-provider: een `CNAME`-record `www` → `timsak.github.io`, en voor de apex `A`-records naar de GitHub Pages IP's ([docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)).
 3. Vervang daarna `https://timsak.github.io/waarkstee/` door het nieuwe domein in `index.html` (canonical, `og:url`, `og:image` en het JSON-LD-blok).
+
+## Cache
+
+`css/style.css` en `js/main.js` worden in `index.html` geladen met `?v=…`. Verhoog dat nummer als je een van die bestanden aanpast, anders kunnen bezoekers tot 10 minuten de oude versie houden (GitHub Pages cachet met `max-age=600`).

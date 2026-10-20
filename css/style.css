@@ -480,6 +480,7 @@ table.flex-table tr:last-child td{border-bottom:none;}
 .cf-field em{font-style:normal;font-weight:600;color:rgba(255,245,234,.6);}
 .cf-field input,.cf-field textarea{
   font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);
+  -webkit-appearance:none;appearance:none;
   border:2.5px solid var(--ink);border-radius:14px;padding:12px 14px;width:100%;box-sizing:border-box;
 }
 .cf-field textarea{resize:vertical;min-height:110px;}
