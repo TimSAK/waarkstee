@@ -316,7 +316,8 @@ figure.sfeer-photo{position:relative;padding:0;margin-left:0;margin-right:0;marg
 @media(min-width:640px){.grid-buren{grid-template-columns:repeat(2,1fr);}}
 @media(min-width:980px){.grid-buren{grid-template-columns:repeat(3,1fr);}}
 .buur{display:flex;flex-direction:column;text-decoration:none;color:inherit;}
-.buur .icon{font-weight:800;font-size:1.3rem;line-height:1;}
+.buur-logo{display:flex;align-items:center;height:56px;margin-bottom:18px;}
+.buur-logo img{width:auto;height:auto;max-height:44px;max-width:min(100%,210px);}
 .buur p{flex:1;}
 .buur-link{margin-top:14px;font-size:.88rem;font-weight:800;color:var(--clay-dark);}
 .buur-link::after{content:" ↗";}
